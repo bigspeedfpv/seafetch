@@ -1,0 +1,18 @@
+{
+  "name": "tsflex",
+  "version": "1.0.0",
+  "description": "A simple system fetch written in TypeScript.",
+  "main": "src/index.ts",
+  "repository": "https://github.com/bigspeedfpv/tsflex",
+  "author": "Andrew Brower <bigspeedfpv@gmail.com>",
+  "license": "GPL-3.0",
+  "scripts": {
+    "start": "tsc && node build/index.js"
+  },
+  "dependencies": {
+    "@types/node": "^14.14.22",
+    "chalk": "^4.1.0",
+    "fs": "^0.0.1-security",
+    "typescript": "^4.1.3"
+  }
+}
