@@ -1,5 +1,5 @@
 import "./specs"
-import { getDistro, getKernel, getUptime, getWMDE } from "./specs"
+import { getDistro, getKernel, getPackages, getUptime, getWMDE } from "./specs"
 import { getArt } from "./art"
 
 const distro: string = getDistro()
@@ -12,7 +12,7 @@ const info = [
     getKernel(),
     getWMDE(),
     getUptime(),
-    getDistro(),
+    getPackages(),
     getDistro(),
     getDistro(),
     getDistro(),

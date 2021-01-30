@@ -1,5 +1,6 @@
 import fs from "fs"
 import execa from "execa"
+import { exec } from "child_process"
 
 const magenta: string = "\x1b[35m"
 const white: string = "\x1b[37m"
@@ -34,4 +35,24 @@ export const getUptime = (): string => {
         prettyUptime = `${days != 0 ? `${days} day${days != 1 ? `s` : ``}, ` : ``}${hours != 0 ? `${hours} hour${hours != 1 ? `s` : ``}, ` : ``}${mins} minutes`
     }
     return `${magenta}Uptime: ${white}${prettyUptime}`
+}
+
+export const getPackages = (): string => {
+    const distro = getDistro()
+    let packages = ``
+    try {
+        if (distro.includes("Arch") || distro.includes("Manjaro")) {
+            let pacOut = execa.sync("pacman", ["-Q"]).stdout
+            packages = `${execa.sync("wc", ["-l"], { input: pacOut }).stdout} - pacman`
+        } else if (distro.includes("Debian") || distro.includes("Ubuntu") || distro.includes("Pop!") || distro.includes("Mint")) {
+            let aptOut = execa.sync("apt", ["list"]).stdout
+            packages = `${execa.sync("wc", ["-l"], { input: aptOut }).stdout} - apt`
+        } else if (distro.includes("Void")) {
+            let xbpsOut = execa.sync("xbps-query", ["-l"]).stdout
+            packages = `${execa.sync("wc", ["-l"], { input: xbpsOut }).stdout} - xbps`
+        }
+    } catch(error) {
+        packages = `Unable to get packages.`
+    }
+    return `${magenta}Packages: ${white}${packages}`
 }
