@@ -3,9 +3,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 require("./specs");
 var specs_1 = require("./specs");
 var art_1 = require("./art");
-var distro = "Ubuntu";
+var distro = specs_1.getDistro();
 var art = art_1.getArt(distro);
 var info = [
+    "",
+    specs_1.getDistro(),
+    specs_1.getKernel(),
+    specs_1.getWMDE(),
+    specs_1.getUptime(),
     specs_1.getDistro(),
     specs_1.getDistro(),
     specs_1.getDistro(),
@@ -16,20 +21,6 @@ var info = [
     specs_1.getDistro(),
     specs_1.getDistro(),
     specs_1.getDistro(),
-    specs_1.getDistro(),
-    specs_1.getDistro(),
-    specs_1.getDistro(),
-    specs_1.getDistro(),
-    specs_1.getDistro(),
-    specs_1.getDistro(),
-    specs_1.getDistro(),
-    specs_1.getDistro(),
-    specs_1.getDistro(),
-    specs_1.getDistro(),
-    specs_1.getDistro(),
-    specs_1.getDistro(),
-    specs_1.getDistro(),
-    specs_1.getDistro()
 ];
 var artLines = art.split("\n");
 var longestLine = Math.max.apply(Math, (artLines.map(function (el) { return el.length; })));

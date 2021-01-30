@@ -66,4 +66,21 @@ const ubuntu = `\x1b[33m                          ./+o+-
 \x1b[33m                   \`\`\`\`\` +oo+++o\:     
 \x1b[33m                          \`oo++.      `
 
-const voidLinux = ``
+const voidLinux = `\x1b[32m                __.;=====;.__                  
+\x1b[32m            _.=+==++=++=+=+===;.               
+\x1b[32m             -=+++=+===+=+=+++++=_             
+\x1b[32m        .     -=:\`\`     \`--==+=++==.        
+\x1b[32m       _vi,    \`            --+=++++:         
+\x1b[32m      .uvnvi.       _._       -==+==+.         
+\x1b[32m     .vvnvnI\`    .;==|==;.     :|=||=|.       
+\x1b[32m+QmQQmpvvnv; _yYsyQQWUUQQQm #QmQ#:QQQWUV$QQm.  
+\x1b[32m -QQWQWpvvowZ?.wQQQE==<QWWQ/QWQW.QQWW(: jQWQE  
+\x1b[32m  -$QQQQmmU'  jQQQ@+=<QWQQ)mQQQ.mQQQC+;jWQQ@'  
+\x1b[32m   -$WQ8YnI:   QWQQwgQQWV\`mWQQ.jQWQQgyyWW@!   
+\x1b[32m     -1vvnvv.     \`~+++\`        ++|+++       
+\x1b[32m      +vnvnnv,                 \`-|===         
+\x1b[32m       +vnvnvns.           .      :=-          
+\x1b[32m        -Invnvvnsi..___..=sv=.     \`          
+\x1b[32m          +Invnvnvnnnnnnnnvvnn;.               
+\x1b[32m            ~|Invnvnvvnvvvnnv}+\`              
+\x1b[32m               -~|{*l}*|~                      `

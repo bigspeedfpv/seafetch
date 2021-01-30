@@ -1,5 +1,5 @@
 import "./specs"
-import { getDistro } from "./specs"
+import { getDistro, getKernel, getUptime, getWMDE } from "./specs"
 import { getArt } from "./art"
 
 const distro: string = getDistro()
@@ -7,6 +7,11 @@ const distro: string = getDistro()
 const art: string = getArt(distro)
 
 const info = [
+    "",
+    getDistro(),
+    getKernel(),
+    getWMDE(),
+    getUptime(),
     getDistro(),
     getDistro(),
     getDistro(),
@@ -17,20 +22,6 @@ const info = [
     getDistro(),
     getDistro(),
     getDistro(),
-    getDistro(),
-    getDistro(),
-    getDistro(),
-    getDistro(),
-    getDistro(),
-    getDistro(),
-    getDistro(),
-    getDistro(),
-    getDistro(),
-    getDistro(),
-    getDistro(),
-    getDistro(),
-    getDistro(),
-    getDistro()
 ]
 
 const artLines: string[] = art.split("\n")
