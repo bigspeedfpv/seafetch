@@ -45,7 +45,7 @@ export const getPackages = (): string => {
             let pacOut = execa.sync("pacman", ["-Q"]).stdout
             packages = `${execa.sync("wc", ["-l"], { input: pacOut }).stdout} - pacman`
         } else if (distro.includes("Debian") || distro.includes("Ubuntu") || distro.includes("Pop!") || distro.includes("Mint")) {
-            let aptOut = execa.sync("apt", ["list"]).stdout
+            let aptOut = execa.sync("dpkg", ["-l"]).stdout
             packages = `${execa.sync("wc", ["-l"], { input: aptOut }).stdout} - apt`
         } else if (distro.includes("Void")) {
             let xbpsOut = execa.sync("xbps-query", ["-l"]).stdout
