@@ -112,7 +112,6 @@ export const getRAM = (): string => {
         if (line.length == 2) {
             let key = line[0]
             let val = parseInt(line[1].replace(` kB`, ``))
-            console.log(key, val)
         
             if (key === `MemTotal`) { totalMem = val; usedMem += val }
             else if (key === `Shmem`) { usedMem += val }
