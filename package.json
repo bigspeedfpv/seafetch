@@ -1,5 +1,5 @@
 {
-  "name": "tsflex",
+  "name": "seafetch",
   "version": "1.0.0",
   "description": "A simple system fetch written in TypeScript.",
   "main": "src/index.ts",
@@ -15,5 +15,8 @@
     "execa": "^5.0.0",
     "fs": "^0.0.1-security",
     "typescript": "^4.1.3"
+  },
+  "bin": {
+    "seafetch": "./build/index.js"
   }
 }

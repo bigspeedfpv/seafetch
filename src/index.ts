@@ -1,28 +1,33 @@
+#!/usr/bin/env node
+
 import "./specs"
-import { getDistro, getKernel, getPackages, getUptime, getWMDE } from "./specs"
+import { getCPU, getDistro, getGPU, getKernel, getName, getPackages, getRAM, getResolution, getTheme, getUptime, getWMDE } from "./specs"
 import { getArt } from "./art"
 
 const distro: string = getDistro()
 
 const art: string = getArt(distro)
 
+const theme: string[] = getTheme()
+
 const info = [
-    "",
+    getName(),
+    "-".repeat(getName().length - 20),
     getDistro(),
     getKernel(),
-    getWMDE(),
     getUptime(),
     getPackages(),
-    getDistro(),
-    getDistro(),
-    getDistro(),
-    getDistro(),
-    getDistro(),
-    getDistro(),
-    getDistro(),
-    getDistro(),
-    getDistro(),
+    "",
+    getWMDE(),
+    theme[0],
+    "",
+    getCPU(),
+    getRAM(),
+    getGPU(),
+    getResolution()
 ]
+
+console.log("") // newline
 
 const artLines: string[] = art.split("\n")
 
@@ -35,3 +40,5 @@ for (const i in (artLines.length > info.length ? artLines : info)) {
     let line = artLine + "\x1b[37m\t" + infoLine
     console.log(line)
 }
+
+console.log("") // newline
