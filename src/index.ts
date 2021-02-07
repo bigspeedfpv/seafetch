@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import "./specs"
-import { getCPU, getDistro, getGPU, getKernel, getName, getPackages, getRAM, getResolution, getTheme, getUptime, getWMDE } from "./specs"
+import { getCPU, getDisk, getDistro, getGPU, getKernel, getName, getPackages, getRAM, getResolution, getTheme, getUptime, getWMDE } from "./specs"
 import { getArt } from "./art"
 
 const distro: string = getDistro()
@@ -19,12 +19,12 @@ const info = [
     getPackages(),
     "",
     getWMDE(),
-    theme[0],
+    getResolution(),
     "",
     getCPU(),
     getRAM(),
     getGPU(),
-    getResolution()
+    getDisk()
 ]
 
 console.log("") // newline
